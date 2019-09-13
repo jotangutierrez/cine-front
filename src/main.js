@@ -6,7 +6,13 @@ import router from './router'
 import './main.css'
 import axios from 'axios'
 import VueTailwind from 'vue-tailwind'
+import VModal from 'vue-js-modal'
+import VueFlashMessage from 'vue-flash-message'
+import DatePicker from 'vue2-datepicker'
 
+Vue.use(VueFlashMessage)
+Vue.use(DatePicker)
+Vue.use(VModal)
 Vue.use(VueTailwind)
 
 const base = axios.create({

@@ -8,7 +8,8 @@
     </div>
     <transition enter-active-class="animated fadeIn faster" leave-active-class="animated fadeOut faster">
       <div class="flex justify-center absolute bottom-0 mb-6 inset-x-0" v-show="show">
-        <button class="modal-open px-3 py-2 bg-blue-500 rounded-full">Reservar</button>
+        <button class="modal-open px-3 py-2 bg-blue-500 rounded-full" @click="launchModal(film, searchDate)">{{buttonMessage()}}</button>
+
       </div>
     </transition>
   </div>
@@ -17,11 +18,31 @@
 <script>
 export default {
   name: 'film-card',
-  props: ['film'],
+  props: ['film', 'searchDate'],
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
+      film_data: this.film,
       show: false
+    }
+  },
+  methods: {
+    available (filmData) {
+      return filmData.available_seats > 0
+    },
+
+    buttonMessage () {
+      if (this.available(this.film)) {
+        return 'Reservar'
+      } else {
+        return 'Agotado'
+      }
+    },
+
+    launchModal (filmData, searchDate) {
+      if (this.available(filmData)) {
+        this.$modal.show('hello-world', { filmId: filmData.id, reservationDate: searchDate })
+      }
     }
   }
 }
