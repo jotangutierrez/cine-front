@@ -5,8 +5,6 @@
         <h1 class="pb-6 px-4 font-montserrat text-3xl">Nueva película</h1>
         <form class="md:justify-between" action="/v1/reservations" method="post"
               @submit.prevent="onsubmit">
-
-
           <div class="mb-4 px-4">
             <label class="block font-montserrat text-gray-700 text-sm font-bold mb-2" for="name">Título</label>
             <t-input class="w-full" v-model="film.name" name="name"></t-input>
