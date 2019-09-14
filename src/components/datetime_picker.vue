@@ -1,7 +1,7 @@
 <template>
   <div>
     <date-picker class="" v-if="searchDate" v-model="time1" :lang="lang" v-bind:clearable="false"></date-picker>
-    <date-picker class="" v-if="dateRange" v-model="time1" range shortcuts="shortcuts" v-bind:clearable="false" v-bind:confirm="true" :lang="lang" width="auto"></date-picker>
+    <date-picker class="" v-if="dateRange" v-model="time1" range shortcuts="shortcuts" v-bind:clearable="false" v-bind:confirm="true" :lang="lang"></date-picker>
   </div>
 </template>
 
@@ -62,6 +62,9 @@ export default {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
+  }
 
+  .mx-datepicker-range {
+    width: 100%;
   }
 </style>

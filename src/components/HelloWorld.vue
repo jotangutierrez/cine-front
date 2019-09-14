@@ -36,7 +36,7 @@
       </div>
       <div v-if="!peliculas">
         <div class="flex">
-          <h1 class="font-montserrat text-4xl">Peliculas</h1>
+          <h1 class="font-montserrat text-4xl">Reservas</h1>
         </div>
         <div class="flex py-10">
           <span class="w-1/6 font-montserrat">Selecione una fecha</span>
