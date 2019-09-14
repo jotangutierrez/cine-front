@@ -85,6 +85,9 @@ export default {
 
 </script>
 
-<style scoped>
+<style>
 
+  .v--modal{
+    overflow: visible !important;
+  }
 </style>
