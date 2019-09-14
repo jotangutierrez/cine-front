@@ -56,6 +56,8 @@ export default {
 
   input.mx-input{
     text-align: center;
+    -webkit-box-shadow: none;
+    border-color: #e2e8f0;
   }
 
   .soft-rounded .mx-input{
